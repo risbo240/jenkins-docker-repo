@@ -13,6 +13,8 @@ node{
 			docker.image('xavki/adminer').withRun('-p 90:80') { c ->
 			
 			sh 'docker ps'
+				
+			sh 'curl --version'
 			
 			sh 'curl localhost'
 			
