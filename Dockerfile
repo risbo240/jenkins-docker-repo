@@ -1,3 +1,3 @@
-FROM adminer:latest
-RUN sed -i 's/adminer/xavki/g' /*.html
-EXPOSE 90
+FROM nginx:latest
+RUN sed -i 's/nginx/xavki/g' /*.html
+EXPOSE 8080
