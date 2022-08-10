@@ -10,13 +10,13 @@ node{
 		}
 		
 		stage('Run image') {
-			docker.image('xavki/adminer').withRun('-p 90:80') { c ->
+			docker.image('xavki/adminer').withRun('-p 8080:8080') { c ->
 			
 			sh 'docker ps'
 				
 			sh 'curl --version'
 			
-			sh 'curl localhost'
+			sh 'curl localhost:8080'
 			
 			}
 		}
